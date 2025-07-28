@@ -18,7 +18,7 @@ const navigationItems = [
   },
   {
     title: "About",
-    href: "/about",
+    href: "#about",
     description: "Learn more about CodeSprings",
   },
   {
@@ -58,7 +58,7 @@ export function Navbar() {
               <NavigationMenuItem key={item.title}>
                 <NavigationMenuLink
                   asChild
-                  className={navigationMenuTriggerStyle()}
+                  className={`${navigationMenuTriggerStyle()} bg-transparent`}
                 >
                   <Link href={item.href}>{item.title}</Link>
                 </NavigationMenuLink>
