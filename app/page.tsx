@@ -5,6 +5,9 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Pfp from "./pfp.jpg";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   const slideLinks = [
@@ -14,7 +17,7 @@ export default function Home() {
   ];
   return (
     <div>
-      <div className="h-screen flex flex-col items-center justify-center text-center">
+      <div className="h-screen flex flex-col items-center justify-center text-center bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]">
         <h1 className="text-6xl font-bold">CodeSprings</h1>
         <p className="text-xl font-medium mt-6 max-w-2xl">
           By providing both high-quality programming lessons and requisite
@@ -26,7 +29,7 @@ export default function Home() {
         className="min-h-screen outline bg-neutral-50 px-20 py-25"
         id="about"
       >
-        <div className="prose max-w-full prose-xl prose-p:text-xl prose-p:font-medium">
+        <div className="prose max-w-full prose-xl">
           <h1>About</h1>
           <p>
             We are currently partnered with{" "}
@@ -57,6 +60,29 @@ export default function Home() {
             present solutions.
           </p>
         </div>
+      </div>
+      <div
+        id="instructors"
+        className="min-h-screen py-25 px-20 prose prose-xl bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] max-w-full"
+      >
+        <h1 className="mb-10">Instructors</h1>
+        <div className="h-48 flex flex-row items-center gap-16">
+          <Image
+            src={Pfp}
+            alt="Instructor"
+            className="h-full w-auto rounded-full"
+          />
+          <p className="py-8 max-w-3xl">
+            <strong>Daniel Zhu</strong> is a junior at The Harker School. He
+            enjoys math and programming, but also writing, film, and music. He
+            also hosts a <Link href="https://www.xyzqm.dev/">blog</Link> that
+            explores some of these interests in greater detail.
+          </p>
+        </div>
+        <p>
+          Feel free contact us at{" "}
+          <a href="mailto:info@codesprings.org">info@codesprings.org</a>!
+        </p>
       </div>
     </div>
   );

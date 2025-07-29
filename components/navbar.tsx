@@ -9,13 +9,7 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-
 const navigationItems = [
-  {
-    title: "Courses",
-    href: "/courses",
-    description: "Browse our programming courses and bootcamps",
-  },
   {
     title: "About",
     href: "#about",
@@ -23,13 +17,8 @@ const navigationItems = [
   },
   {
     title: "Instructors",
-    href: "/instructors",
+    href: "#instructors",
     description: "Meet our expert instructors",
-  },
-  {
-    title: "Blog",
-    href: "/blog",
-    description: "Latest insights and tutorials",
   },
 ];
 
@@ -58,9 +47,12 @@ export function Navbar() {
               <NavigationMenuItem key={item.title}>
                 <NavigationMenuLink
                   asChild
-                  className={`${navigationMenuTriggerStyle()} bg-transparent`}
+                  className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 h-9 px-4 py-2 bg-transparent hover:bg-transparent focus:bg-transparent data-[active]:bg-transparent data-[state=open]:bg-transparent"
                 >
-                  <Link href={item.href}>{item.title}</Link>
+                  <Link href={item.href} className="relative group/inner">
+                    {item.title}
+                    <span className="absolute left-1/2 bottom-0 w-0 h-0.5 bg-primary transition-all duration-300 ease-out group-hover/inner:w-9/12 transform -translate-x-1/2"></span>
+                  </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
             ))}
@@ -70,7 +62,7 @@ export function Navbar() {
         {/* Enroll Button */}
         <div className="flex items-center space-x-4">
           <Button asChild>
-            <Link href="/enroll">Enroll Now</Link>
+            <a href="mailto:info@codesprings.org">Contact Us</a>
           </Button>
         </div>
       </div>

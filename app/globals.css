@@ -123,7 +123,4 @@
     body {
         @apply bg-background text-foreground;
     }
-    /* p a {
-        @apply underline text-foreground hover:text-blue-800;
-    } */
 }
