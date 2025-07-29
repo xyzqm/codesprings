@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "./logo.png";
@@ -7,18 +8,17 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 const navigationItems = [
   {
     title: "About",
-    href: "#about",
+    href: "/#about",
     description: "Learn more about CodeSprings",
   },
   {
     title: "Instructors",
-    href: "#instructors",
-    description: "Meet our expert instructors",
+    href: "/#instructors",
+    description: "Meet our instructors",
   },
 ];
 
@@ -36,7 +36,6 @@ export function Navbar() {
                 className="h-full w-auto"
               />
             </div>
-            {/* <span className="font-bold text-xl">CodeSprings</span> */}
           </Link>
         </div>
 
@@ -49,10 +48,10 @@ export function Navbar() {
                   asChild
                   className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 h-9 px-4 py-2 bg-transparent hover:bg-transparent focus:bg-transparent data-[active]:bg-transparent data-[state=open]:bg-transparent"
                 >
-                  <Link href={item.href} className="relative group/inner">
+                  <a href={item.href} className="relative group/inner">
                     {item.title}
                     <span className="absolute left-1/2 bottom-0 w-0 h-0.5 bg-primary transition-all duration-300 ease-out group-hover/inner:w-9/12 transform -translate-x-1/2"></span>
-                  </Link>
+                  </a>
                 </NavigationMenuLink>
               </NavigationMenuItem>
             ))}
