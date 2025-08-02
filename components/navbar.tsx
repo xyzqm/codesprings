@@ -27,7 +27,7 @@ export function Navbar() {
     <header className="fixed z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="top-0 container flex h-16 items-center justify-between px-4 mx-auto">
         {/* Logo */}
-        <div className="flex items-center space-x-2 h-full">
+        <div className="flex items-center space-x-2 h-full mr-20">
           <Link href="/" className="flex items-center space-x-2 h-full">
             <div className="h-full rounded-lg flex items-center justify-center py-1">
               <Image

@@ -34,7 +34,7 @@ export default function Home() {
           <p>
             We are currently partnered with{" "}
             <a href="https://www.addiscoder.com/">AddisCoder</a> to provide
-            their alumni further support and mentorship.
+            their alumni with further support and mentorship.
           </p>
           <p>Here are some sample slides from previous classes:</p>
           <Carousel className="w-full max-w-4xl mx-auto mt-8">
@@ -73,10 +73,11 @@ export default function Home() {
             className="h-full w-auto rounded-full"
           />
           <p className="py-8 max-w-3xl">
-            <strong>Daniel Zhu</strong> is a junior at The Harker School. He
-            enjoys math and programming, but also writing, film, and music. He
-            also hosts a <Link href="https://www.xyzqm.dev/">blog</Link> that
-            explores some of these interests in greater detail.
+            <strong>Daniel Zhu</strong> is a junior at The Harker School, as
+            well as the founder of CodeSprings. He enjoys math and programming,
+            but also writing, film, and music. He also hosts a{" "}
+            <Link href="https://www.xyzqm.dev/">blog</Link> that explores some
+            of these interests in greater detail.
           </p>
         </div>
         <p>
