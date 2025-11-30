@@ -78,7 +78,7 @@ export default function Home() {
             <strong>Daniel Zhu</strong> is a junior at The Harker School, as
             well as the founder of CodeSprings. He enjoys math and programming,
             but also writing, film, and music. He also hosts a{" "}
-            <Link href="https://www.xyzqm.dev/">blog</Link> that explores some
+            <Link href="https://danielz.fyi/">blog</Link> that explores some
             of these interests in greater detail.
           </p>
         </div>
